@@ -2,7 +2,7 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract ShreyanshToken {
-    string public name = "MyToken";
+    string public name = "ShreyanshToken";
     string public symbol = "Shreyansh";
     string public standard = "Shreyansh Token v1.0";
 
@@ -23,11 +23,6 @@ contract ShreyanshToken {
 
     mapping(address => uint256) public balanceOf;
     mapping(address => mapping(address => uint256)) public allowance;
-
-    function MyToken(uint256 _initialSupply) public {
-        balanceOf[msg.sender] = _initialSupply;
-        totalSupply = _initialSupply;
-    }
 
     function transfer(address _to, uint256 _value)
         public
